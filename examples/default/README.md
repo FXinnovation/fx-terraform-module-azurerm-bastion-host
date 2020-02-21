@@ -1,4 +1,4 @@
-## Standard example
+## Default example
 
 ## Usage
 ```
