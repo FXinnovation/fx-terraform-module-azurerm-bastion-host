@@ -13,9 +13,9 @@ resource "azurerm_bastion_host" "this" {
     for_each = var.ip_configurations[count.index]
 
     content {
-      name                 = ip_configuration.name
-      subnet_id            = ip_configuration.subnet_id
-      public_ip_address_id = ip_configuration.public_ip_address_id
+      name                 = ip_configuration.value.name
+      subnet_id            = ip_configuration.value.subnet_id
+      public_ip_address_id = ip_configuration.value.public_ip_address_id
     }
   }
 
