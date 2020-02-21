@@ -3,6 +3,9 @@
 ## Usage
 See `examples` folders for usage of this module.
 
+## Limitation
+- Name of the subnet used for the bastion host should be `AzureBastionSubnet`
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Providers
 
