@@ -34,9 +34,9 @@ resource "azurerm_public_ip" "example" {
 module "example" {
   source = "../.."
 
-  bastion_host_names               = ["foo${random_string.this.result}"]
-  bastion_host_location            = ["West US"]
-  bastion_host_resource_group_name = ["${azurerm_resource_group.example.name}"]
+  bastion_host_names                = ["foo${random_string.this.result}"]
+  bastion_host_locations            = ["West US"]
+  bastion_host_resource_group_names = ["${azurerm_resource_group.example.name}"]
 
   ip_configurations = [
     [
