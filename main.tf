@@ -3,7 +3,7 @@
 ###
 
 resource "azurerm_bastion_host" "this" {
-  count = var.enabled ? lenghth(var.bastion_host_names) : 0
+  count = var.enabled ? length(var.bastion_host_names) : 0
 
   name                = element(var.bastion_host_names, count.index)
   location            = element(var.bastion_host_locations, count.index)
