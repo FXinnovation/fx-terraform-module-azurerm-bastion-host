@@ -8,7 +8,7 @@ resource "azurerm_public_ip" "this" {
   name                = var.public_ip_name
   location            = var.public_ip_location
   resource_group_name = var.public_ip_resource_group_name
-  allocated_method    = var.public_ip_allocated_method
+  allocation_method   = var.public_ip_allocation_method
   sku                 = var.public_ip_sku
 
   tags = merge(

@@ -30,7 +30,7 @@ module "example" {
   public_ip_name                   = "boo${random_string.this.result}"
   public_ip_location               = azurerm_resource_group.example.location
   public_ip_resource_group_name    = azurerm_resource_group.example.name
-  public_ip_allocated_method       = "Static"
+  public_ip_allocation_method      = "Static"
   public_ip_sku                    = "Standard"
   bastion_host_name                = "foo${random_string.this.result}"
   bastion_host_location            = "West US"
