@@ -21,6 +21,8 @@ See `examples` folders for usage of this module.
 | bastion\_host\_name | List of names of the Bastion Host. Changing this forces a new resource to be created. | `string` | `""` | no |
 | bastion\_host\_resource\_group\_name | A list of names of the resource groups in which Bastion Host will be created. | `string` | `""` | no |
 | bastion\_host\_tags | Tag which will associated to the Bastion Host. | `map` | `{}` | no |
+| client\_id | n/a | `string` | n/a | yes |
+| client\_secret | n/a | `string` | n/a | yes |
 | enabled | Enable or disable this module. | `bool` | `true` | no |
 | ip\_configurations | One or more IP configuration blocks. | `list(object({ name = string, subnet_id = string }))` | `[]` | no |
 | public\_ip\_allocation\_method | Defines the allocation method for this IP address. Possible values are `Static` or `Dynamic`. | `string` | `"Dynamic"` | no |
@@ -30,7 +32,9 @@ See `examples` folders for usage of this module.
 | public\_ip\_resource\_group\_name | The name of the resource group in which to create the Public IP. | `string` | `""` | no |
 | public\_ip\_sku | The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`. | `string` | `"Basic"` | no |
 | public\_ip\_tags | Tags which will be associated to the Public IP. | `map` | `{}` | no |
+| subscription\_id | n/a | `string` | n/a | yes |
 | tags | Tags shared by all resources of this module. Will be merged with any other specific tags by resource. | `map` | `{}` | no |
+| tenant\_id | n/a | `string` | n/a | yes |
 
 ## Outputs
 
