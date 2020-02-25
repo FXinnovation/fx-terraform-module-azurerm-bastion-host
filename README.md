@@ -17,9 +17,9 @@ See `examples` folders for usage of this module.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| bastion\_host\_location | List of Azure supported locations where the resource exists. Changing this forces a new resource to be created.Please refer the link for the azure locations : https://docs.microsoft.com/en-us/azure/bastion/bastion-faq | `string` | `""` | no |
-| bastion\_host\_name | List of names of the Bastion Host. Changing this forces a new resource to be created. | `string` | `""` | no |
-| bastion\_host\_resource\_group\_name | A list of names of the resource groups in which Bastion Host will be created. | `string` | `""` | no |
+| bastion\_host\_location | The Azure supported location where the resource exists. Changing this forces a new resource to be created.Please refer the link for the azure locations : https://docs.microsoft.com/en-us/azure/bastion/bastion-faq | `string` | `""` | no |
+| bastion\_host\_name | Specifies name of the Bastion Host. Changing this forces a new resource to be created. | `string` | `""` | no |
+| bastion\_host\_resource\_group\_name | Specifies name of the resource group in which Bastion Host will be created. | `string` | `""` | no |
 | bastion\_host\_tags | Tag which will associated to the Bastion Host. | `map` | `{}` | no |
 | enabled | Enable or disable this module. | `bool` | `true` | no |
 | ip\_configurations | One or more IP configuration blocks. | `list(object({ name = string, subnet_id = string }))` | `[]` | no |
