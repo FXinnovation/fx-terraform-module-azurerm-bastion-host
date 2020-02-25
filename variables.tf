@@ -37,8 +37,8 @@ variable "public_ip_resource_group_name" {
 }
 
 variable "public_ip_allocation_method" {
-  description = " Defines the allocation method for this IP address. Possible values are `Static` or `Dynamic`. "
-  default     = "Static"
+  description = "Defines the allocation method for this IP address. Possible values are `Static` or `Dynamic`. "
+  default     = "Dynamic"
 }
 
 variable "public_ip_sku" {

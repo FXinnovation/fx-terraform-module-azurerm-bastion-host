@@ -23,7 +23,7 @@ See `examples` folders for usage of this module.
 | bastion\_host\_tags | Tag which will associated to the Bastion Host. | `map` | `{}` | no |
 | enabled | Enable or disable this module. | `bool` | `true` | no |
 | ip\_configurations | One or more IP configuration blocks. | `list(object({ name = string, subnet_id = string }))` | `[]` | no |
-| public\_ip\_allocation\_method | Defines the allocation method for this IP address. Possible values are `Static` or `Dynamic`. | `string` | `"Static"` | no |
+| public\_ip\_allocation\_method | Defines the allocation method for this IP address. Possible values are `Static` or `Dynamic`. | `string` | `"Dynamic"` | no |
 | public\_ip\_enabled | Boolean flag which describes whether or not to enable the Public IP. | `bool` | `false` | no |
 | public\_ip\_location | Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. | `string` | `""` | no |
 | public\_ip\_name | Specifies the name of the Public IP resource. Changing this forces a new resource to be created. | `string` | `""` | no |
