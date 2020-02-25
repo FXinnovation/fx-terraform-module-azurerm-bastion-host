@@ -25,7 +25,8 @@ No provider.
 
 | Name | Description |
 |------|-------------|
-| bastion\_host\_ids | n/a |
-| dns\_names | n/a |
+| bastion\_host\_id | n/a |
+| dns\_name | n/a |
+| public\_ip\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

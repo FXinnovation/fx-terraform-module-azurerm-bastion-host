@@ -12,7 +12,7 @@ terraform destroy
 
 | Name | Version |
 |------|---------|
-| azurerm | ~>1.44.0 |
+| azurerm | ~>2.0.0 |
 | random | n/a |
 
 ## Inputs
@@ -28,7 +28,8 @@ terraform destroy
 
 | Name | Description |
 |------|-------------|
-| bastion\_host\_ids | n/a |
-| dns\_names | n/a |
+| bastion\_host\_id | n/a |
+| dns\_name | n/a |
+| public\_ip\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

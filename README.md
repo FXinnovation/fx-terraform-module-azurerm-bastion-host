@@ -11,25 +11,33 @@ See `examples` folders for usage of this module.
 
 | Name | Version |
 |------|---------|
-| azurerm | ~>1.44.0 |
+| azurerm | ~>2.0.0 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
-| bastion\_host\_locations | List of Azure supported locations where the resource exists. Changing this forces a new resource to be created.Please refer the link for the azure locations : https://docs.microsoft.com/en-us/azure/bastion/bastion-faq | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
-| bastion\_host\_names | List of names of the Bastion Host. Changing this forces a new resource to be created. | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
-| bastion\_host\_resource\_group\_names | A list of names of the resource groups in which Bastion Host will be created. | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
+| bastion\_host\_location | List of Azure supported locations where the resource exists. Changing this forces a new resource to be created.Please refer the link for the azure locations : https://docs.microsoft.com/en-us/azure/bastion/bastion-faq | `string` | `""` | no |
+| bastion\_host\_name | List of names of the Bastion Host. Changing this forces a new resource to be created. | `string` | `""` | no |
+| bastion\_host\_resource\_group\_name | A list of names of the resource groups in which Bastion Host will be created. | `string` | `""` | no |
 | bastion\_host\_tags | Tag which will associated to the Bastion Host. | `map` | `{}` | no |
 | enabled | Enable or disable this module. | `bool` | `true` | no |
-| ip\_configurations | One or more IP configuration blocks. | `list(list(object({ name = string, subnet_id = string, public_ip_address_id = string })))` | <pre>[<br>  null<br>]</pre> | no |
+| ip\_configurations | One or more IP configuration blocks. | `list(object({ name = string, subnet_id = string }))` | `[]` | no |
+| public\_ip\_allocation\_method | Defines the allocation method for this IP address. Possible values are `Static` or `Dynamic`. | `string` | `"Static"` | no |
+| public\_ip\_enabled | Boolean flag which describes whether or not to enable the Public IP. | `bool` | `false` | no |
+| public\_ip\_location | Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. | `string` | `""` | no |
+| public\_ip\_name | Specifies the name of the Public IP resource. Changing this forces a new resource to be created. | `string` | `""` | no |
+| public\_ip\_resource\_group\_name | The name of the resource group in which to create the Public IP. | `string` | `""` | no |
+| public\_ip\_sku | The SKU of the Public IP. Accepted values are `Basic` and `Standard`. Defaults to `Basic`. | `string` | `"Basic"` | no |
+| public\_ip\_tags | Tags which will be associated to the Public IP. | `map` | `{}` | no |
 | tags | Tags shared by all resources of this module. Will be merged with any other specific tags by resource. | `map` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| bastion\_host\_dns\_names | The FQDNs for the Bastion Host. |
-| bastion\_host\_ids | The IDs of the Bastion Host. |
+| bastion\_host\_dns\_name | The FQDNs for the Bastion Host. |
+| bastion\_host\_id | The IDs of the Bastion Host. |
+| public\_ip\_id | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

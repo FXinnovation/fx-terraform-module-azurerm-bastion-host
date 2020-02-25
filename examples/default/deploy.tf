@@ -23,24 +23,20 @@ resource "azurerm_subnet" "example" {
   address_prefix       = "10.0.1.0/24"
 }
 
-resource "azurerm_public_ip" "example" {
-  name                = "boo${random_string.this.result}"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-  allocation_method   = "Static"
-  sku                 = "Standard"
-}
-
 module "example" {
   source = "../.."
 
-  bastion_host_names                = ["foo${random_string.this.result}"]
-  bastion_host_locations            = ["West US"]
-  bastion_host_resource_group_names = ["${azurerm_resource_group.example.name}"]
+  public_ip_enabled                = true
+  public_ip_name                   = "boo${random_string.this.result}"
+  public_ip_location               = azurerm_resource_group.example.location
+  public_ip_resource_group_name    = azurerm_resource_group.example.name
+  public_ip_allocated_method       = "Static"
+  public_ip_sku                    = "Standard"
+  bastion_host_name                = "foo${random_string.this.result}"
+  bastion_host_locations           = "West US"
+  bastion_host_resource_group_name = "${azurerm_resource_group.example.name}"
 
-  ip_configurations = [
-    [
-      { name = "boo${random_string.this.result}", subnet_id = "${azurerm_subnet.example.id}", public_ip_address_id = "${azurerm_public_ip.example.id}" }
-    ]
+  ip_configuration = [
+    { name = "boo${random_string.this.result}", subnet_id = "${azurerm_subnet.example.id}" }
   ]
 }
