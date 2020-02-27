@@ -4,7 +4,7 @@
 
 output "bastion_host_id" {
   description = "The IDs of the Bastion Host."
-  value       = elementt(concat(azurerm_bastion_host.this.*.id, list("")), 0)
+  value       = element(concat(azurerm_bastion_host.this.*.id, list("")), 0)
 }
 
 output "bastion_host_dns_name" {
