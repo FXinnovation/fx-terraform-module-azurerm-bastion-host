@@ -57,19 +57,16 @@ variable "public_ip_tags" {
 
 variable "bastion_host_name" {
   description = "Specifies name of the Bastion Host. Changing this forces a new resource to be created."
-  type        = string
   default     = ""
 }
 
 variable "bastion_host_location" {
   description = "The Azure supported location where the resource exists. Changing this forces a new resource to be created.Please refer the link for the azure locations : https://docs.microsoft.com/en-us/azure/bastion/bastion-faq"
-  type        = string
   default     = ""
 }
 
 variable "bastion_host_resource_group_name" {
   description = "Specifies name of the resource group in which Bastion Host will be created."
-  type        = string
   default     = ""
 }
 
