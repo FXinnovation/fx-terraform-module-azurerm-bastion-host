@@ -22,6 +22,8 @@ See `examples` folders for usage of this module.
 | bastion\_host\_resource\_group\_name | Specifies name of the resource group in which Bastion Host will be created. | `string` | `""` | no |
 | bastion\_host\_tags | Tag which will associated to the Bastion Host. | `map` | `{}` | no |
 | enabled | Enable or disable this module. | `bool` | `true` | no |
+| existing\_public\_ip\_address\_id | The ID of the existing public IP address. | `string` | `""` | no |
+| existing\_public\_ip\_enabled | Boolean flag which describes whether to use existing Public IP or not. | `bool` | `false` | no |
 | ip\_configurations | One or more IP configuration blocks. | `list(object({ name = string, subnet_id = string }))` | `[]` | no |
 | public\_ip\_allocation\_method | Defines the allocation method for this IP address. Possible values are `Static` or `Dynamic`. | `string` | `"Dynamic"` | no |
 | public\_ip\_enabled | Boolean flag which describes whether or not to enable the Public IP. | `bool` | `false` | no |

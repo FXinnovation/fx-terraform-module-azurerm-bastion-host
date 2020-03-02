@@ -70,6 +70,16 @@ variable "bastion_host_resource_group_name" {
   default     = ""
 }
 
+variable "existing_public_ip_enabled" {
+  description = "Boolean flag which describes whether to use existing Public IP or not."
+  default     = false
+}
+
+variable "existing_public_ip_address_id" {
+  description = "The ID of the existing public IP address."
+  default     = ""
+}
+
 variable "ip_configurations" {
   description = "One or more IP configuration blocks."
   type        = list(object({ name = string, subnet_id = string }))
