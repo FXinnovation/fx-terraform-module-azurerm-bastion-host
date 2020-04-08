@@ -7,16 +7,23 @@ See `examples` folders for usage of this module.
 - Name of the subnet used for the bastion host should be `AzureBastionSubnet`
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| terraform | >= 0.12 |
+| azurerm | >= 2.0.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
-| azurerm | >= 1.36.0, < 2.0.0 |
+| azurerm | >= 2.0.0 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
+|------|-------------|------|---------|:--------:|
 | bastion\_host\_location | The Azure supported location where the resource exists. Changing this forces a new resource to be created.Please refer the link for the azure locations : https://docs.microsoft.com/en-us/azure/bastion/bastion-faq | `string` | `""` | no |
 | bastion\_host\_name | Specifies name of the Bastion Host. Changing this forces a new resource to be created. | `string` | `""` | no |
 | bastion\_host\_resource\_group\_name | Specifies name of the resource group in which Bastion Host will be created. | `string` | `""` | no |
